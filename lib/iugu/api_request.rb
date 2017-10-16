@@ -26,13 +26,12 @@ module Iugu
     end
 
     def self.build_request(method, url, data)
-      { 
+      {
         verify_ssl: true,
         headers: default_headers,
         method: method,
         payload: data.to_json,
-        url: url,
-        timeout: 30
+        url: url
       }
     end
 
